@@ -38,7 +38,7 @@ function onResize() {
     canvas.height = window.innerHeight;
 }
 
-function update() {
+function rain() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     if (Math.random() < 0.1) {
@@ -50,9 +50,9 @@ function update() {
         drawDrop(drop);
     });
 
-    requestAnimationFrame(update);
+    requestAnimationFrame(rain);
 }
 
 window.addEventListener("resize", onResize);
 
-update();
+rain();
